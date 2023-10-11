@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {Button} from "@mui/material";
+import {Box, Button} from "@mui/material";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,10 +11,10 @@ function App() {
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo" alt="Vite logo"/>
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} className="logo react" alt="React logo"/>
         </a>
       </div>
       <h1>Vite + React</h1>
@@ -22,7 +22,10 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-          <Button>asdfasdassdaf1234</Button>
+        <Button>asdfasdassdaf1234</Button>
+        <Box>ich bin eine Box</Box>
+
+
         <p>
           Editt <code>src/App.tsx</code> and save to test HMR
         </p>
