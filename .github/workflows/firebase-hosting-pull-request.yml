@@ -13,6 +13,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Debug NPM Auth
+        run: cat .npmrc && npm -v
+
       - name: Clean npm Cache
         run: npm cache clean -f
 
