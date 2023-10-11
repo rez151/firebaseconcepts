@@ -12,8 +12,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '18'
-#          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-      - name: install dependencies
+      #          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Set up NPM Auth
+        run: echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
+
+      - name: Install dependencies
         run: npm ci
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
