@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
         Your Website
@@ -26,7 +26,7 @@ function Copyright() {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
+// remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function SignIn() {
