@@ -10,23 +10,12 @@ jobs:
     steps:
 
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm ci
-      - run: npm test
-
-      - name: Debug NPM Auth
-        run: cat .npmrc && npm -v
-
-      - name: Clean npm Cache
-        run: npm cache clean -f
-
-      - name: Install dependencies
-        run: npm ci --force
+      - uses: actions/setup-node@v3.8.1
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CONCEPTS_6BEF4 }}'
           projectId: concepts-6bef4
+
+  
